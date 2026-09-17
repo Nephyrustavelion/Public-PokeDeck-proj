@@ -26,7 +26,7 @@ export default function PokemonPage() {
       setError('');
       try {
         // The list endpoint supplies names and detail URLs, not full card data.
-        const list = await fetchJSON('https://pokeapi.co/api/v2/pokemon?limit=30');
+        const list = await fetchJSON('https://pokeapi.co/api/v2/pokemon?limit=151');
         // Promise.all waits for the small collection of detail requests together.
         const details = await Promise.all(list.results.map((item) => fetchJSON(item.url)));
         if (!controller.signal.aborted) {
