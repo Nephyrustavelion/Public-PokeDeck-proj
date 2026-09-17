@@ -1,0 +1,36 @@
+/* Plain CSS keeps styling separate from the React concepts in this project. */
+:root { font-family: system-ui, sans-serif; color: #203831; background: #f4f7f3; line-height: 1.5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+a { color: #146448; }
+button, input { font: inherit; border-radius: 8px; }
+button { background: #176448; color: white; border: 1px solid #176448; padding: .65rem 1rem; cursor: pointer; }
+button:hover { background: #104d36; }
+button.secondary { background: white; color: #176448; }
+button.secondary:hover { background: #edf5ee; }
+input { width: 100%; padding: .65rem; border: 1px solid #8a9d91; background: white; color: #203831; }
+label { display: block; font-weight: 600; margin-bottom: .4rem; }
+:focus-visible { outline: 3px solid #ce7e00; outline-offset: 3px; }
+.header { display: flex; flex-wrap: wrap; align-items: center; gap: 1.2rem; padding: 1rem 4%; background: white; border-bottom: 1px solid #d6e1d8; }
+.header strong { font-size: 1.4rem; }
+nav { display: flex; flex-wrap: wrap; gap: 1rem; margin-right: auto; }
+nav a { text-decoration: none; padding: .4rem; }
+nav a.active { text-decoration: underline; font-weight: 700; }
+.container { max-width: 1100px; margin: 2rem auto; padding: 0 1rem 2rem; }
+h1 { margin-bottom: .5rem; }
+.search { max-width: 480px; margin: 1.5rem 0; }
+/* Responsive grid wraps cards automatically without a UI library. */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 1rem; }
+.card { background: white; border: 1px solid #d6e1d8; border-radius: 14px; padding: 1.25rem; overflow-wrap: anywhere; }
+.card img, .image-placeholder { display: block; margin: .5rem auto; height: 120px; }
+.image-placeholder { display: grid; place-items: center; }
+.card h2 { margin: .5rem 0; font-size: 1.3rem; }
+.pokemon-name { text-transform: capitalize; }
+.card form button { margin-top: .75rem; width: 100%; }
+.muted { color: #58695f; }
+.note { padding: .7rem; background: #f0f5ef; border-radius: 8px; white-space: pre-wrap; }
+.login { max-width: 420px; margin: 10vh auto; }
+.eyebrow { font-size: .75rem; letter-spacing: .12em; color: #176448; }
+.clear { margin-bottom: 1rem; }
+.notice { padding: 1rem; background: #fff0cf; margin: 0; }
+@media (max-width: 480px) { .login { margin: 2rem 1rem; } .header { gap: .7rem; } }
